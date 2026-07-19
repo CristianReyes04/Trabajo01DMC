@@ -60,16 +60,16 @@ elif modulo == "Ejercicio 2":
   )
 
 # Botón Agregar
-    if st.button("Agregar actividad"):
-      actividad = {
-        "Nombre": nombre,
-        "Tipo": tipo,
-        "Presupuesto": presupuesto,
-        "Gasto Real": gasto_real
-      }
-      st.session_state.actividades.append(actividad)
-      st.success("Actividad agregada correctamente.")
-      # Mostrar actividades
+if st.button("Agregar actividad"):
+  actividad = {
+    "Nombre": nombre,
+    "Tipo": tipo,
+    "Presupuesto": presupuesto,
+    "Gasto Real": gasto_real
+  }
+  st.session_state.actividades.append(actividad)
+  st.success("Actividad agregada correctamente.")
+  # Mostrar actividades
 if len(st.session_state.actividades) > 0:
   st.subheader("Lista de actividades")
   df = pd.DataFrame(st.session_state.actividades)
