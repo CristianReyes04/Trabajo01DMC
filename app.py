@@ -62,24 +62,24 @@ elif modulo == "Ejercicio 2":
     value=0.0
   )
   if gasto_real <= presupuesto:
-      estado = "Dentro del presupuesto"
-    else:
-      estado = "Excedió el presupuesto"
-      
+    estado = "Dentro del presupuesto"
+  else:
+    estado = "Excedió el presupuesto"
+  
   if st.button("Agregar actividad"):
     actividad = {
       "Nombre": nombre,
       "Tipo": tipo,
       "Presupuesto": presupuesto,
       "Gasto Real": gasto_real,
-      "Estado":estado
+      "Estado": estado
     }
   st.session_state.actividades.append(actividad)
   # Mostrar la tabla
   st.subheader("Lista de actividades")
   df = pd.DataFrame(st.session_state.actividades)
   st.dataframe(df)
-
+  
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
 elif modulo == "Ejercicio 4":
