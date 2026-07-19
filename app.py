@@ -27,7 +27,19 @@ if modulo == "Home":
   st.markdown(f""" **Tecnologías utilizadas:** {tecnologias}""")
   
 elif modulo == "Ejercicio 1":
-  st.write("Estas en el Ejercicio 1")
+  st.title("Verificado Simple")
+  presupuesto = st.number_input("Ingrese Presupuesto", value=0)
+  gasto = st.number_input("Ingrese Gasto", value=0)
+  if st.button("Verificar"):
+        if gasto <= presupuesto:
+            saldo = presupuesto - gasto
+            st.success(f"✅ El gasto está dentro del presupuesto.")
+            st.write(f"Saldo disponible: S/ {saldo:.2f}")
+        else:
+            exceso = gasto - presupuesto
+            st.error(f"❌ El presupuesto fue excedido.")
+            st.write(f"Exceso: S/ {exceso:.2f}")
+  
 elif modulo == "Ejercicio 2":
   st.write("Estas en el Ejercicio 2")
 elif modulo == "Ejercicio 3":
