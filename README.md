@@ -71,5 +71,6 @@ https://trabajo01dmc-cristian-reyes-reyes.streamlit.app/
 ## Autor
 
 **Cristian Reyes**
+2026
 
 Proyecto desarrollado como práctica del **Módulo 1 – Fundamentos de Programación**.
