@@ -87,13 +87,20 @@ elif modulo == "Ejercicio 3":
   def calcular_interes(presupuesto, tasa, meses):
     return presupuesto * tasa * meses
   
-  presupuesto = st.number_input("Ingrese Presupuesto",min_value=0.0,value=0.0)
   tasa = st.number_input("Ingrese tasa",min_value=0.0,value=0.0)
   meses = st.number_input("Ingrese meses", min_value=0,value=0)
   
   if st.button("Calcular"):
-    resultado = calcular_interes(presupuesto,tasa,meses)
-    st.write(f"Resultado: S/ {resultado:.2f}")
+
+    # Mostrar la tabla
+    if len(st.session_state.actividades) > 0:
+       for actividad in st.session_state.actividades:
+            presupuesto = actividad["Presupuesto"]
+            resultado = calcular_interes(presupuesto,tasa,meses)
+    
+    st.subheader("Lista de actividades")
+    df = pd.DataFrame(st.session_state.actividades)
+    st.dataframe(df)
     
 elif modulo == "Ejercicio 4":
   st.write("Estas en el Ejercicio 4")
