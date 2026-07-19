@@ -3,17 +3,13 @@ import numpy as np
 import datetime
 
 st.session_state
-
-
-st.image("Logo_python.png")
-st.sidebar.image("Logo_inst.png")
+st.image("Abnaks.png")
 st.sidebar.title("Módulos")
 
 modulo = st.sidebar.selectbox("Elija un módulo", ["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
 
 if modulo == "Home":
   st.title("Proyecto Bancario Abanks - Ladonware")
-  st.image("Abnaks.png")
   st.image("ladon.jpg")
 
   lv_estudiante = "Cristian Valentin Reyes Reyes"
@@ -21,7 +17,7 @@ if modulo == "Home":
   lv_informcion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
   lv_anio = datetime.date.today().year
   lv_descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
-  lv_tecnologias = "Streamlit"
+  lv_tecnologias = "Python, Streamlit, NumPy"
 
   st.write("Nombre del estudiante:",lv_estudiante)
   st.write("Nombre del Módulo:",lv_modulo)
