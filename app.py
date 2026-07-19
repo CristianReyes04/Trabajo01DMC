@@ -84,11 +84,9 @@ if len(st.session_state.actividades) > 0:
     if gasto <= presupuesto:
       saldo = presupuesto - gasto
       st.success(f"{nombre}: Cumple el presupuesto. Saldo disponible: S/ {saldo:.2f}")
-        else:
-            exceso = gasto - presupuesto
-            st.error(
-                f"{nombre}: Excedió el presupuesto en S/ {exceso:.2f}"
-            )
+    else:
+      exceso = gasto - presupuesto
+      st.error(f"{nombre}: Excedió el presupuesto en S/ {exceso:.2f}")
           
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
