@@ -14,7 +14,7 @@ if modulo == "Home":
   st.write("Módulo Home Datos Personales")
   estudiante = "Cristian Valentin Reyes Reyes"
   nom_modulo    = "Módulo 01"
-  informacion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
+  informacion = "Soy de nacionalidad Peruana, actualmente vivo en Piura."
   anio = datetime.date.today().year
   descripcion = "El Proyecto de una plaforma que puedan gestionar operaciones Bancarias"
   tecnologias = "Python, Streamlit, NumPy"
