@@ -65,7 +65,7 @@ elif modulo == "Ejercicio 2":
       "Presupuesto": presupuesto,
       "Gasto Real": gasto_real
     }
-    st.write("Actividad agregada correctamente.")
+    st.write(actividad)
    
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
