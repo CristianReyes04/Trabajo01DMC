@@ -17,8 +17,8 @@ if modulo == "Home":
   anio = datetime.date.today().year
   descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
   tecnologias = "Python, Streamlit, NumPy"
-
-st.markdown(f""" **Nombre del estudiante:** {estudiante}**Módulo:** {nom_modulo}**Información:** {informacion}**Año:** {anio}**Descripción del proyecto:**{descripcion}**Tecnologías utilizadas:**{tecnologias}""")
+  
+  st.markdown(f""" **Nombre del estudiante:** {estudiante}**Módulo:** {nom_modulo}**Información:** {informacion}**Año:** {anio}**Descripción del proyecto:**{descripcion}**Tecnologías utilizadas:**{tecnologias}""")
   
 elif modulo == "Ejercicio 1":
   st.write("Estas en el Ejercicio 1")
