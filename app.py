@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import datetime
 
-st.session_state
 st.sidebar.image("Abnaks.png")
 st.sidebar.title("Módulos")
 
