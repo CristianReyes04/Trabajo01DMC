@@ -74,7 +74,7 @@ elif modulo == "Ejercicio 2":
       "Gasto Real": gasto_real,
       "Estado": estado
     }
-  st.session_state.actividades.append(actividad)
+    st.session_state.actividades.append(actividad)
   # Mostrar la tabla
   if len(st.session_state.actividades) > 0:
     
