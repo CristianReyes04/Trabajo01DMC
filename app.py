@@ -43,23 +43,21 @@ elif modulo == "Ejercicio 1":
   
 elif modulo == "Ejercicio 2":
   st.title("Registro Actividades Financieras")
-  if "actividades" not in st.session_state:
-    st.session_state.actividades = []
-    nombre = st.text_input("Nombre de la actividad")
-    tipo = st.selectbox(
-      "Tipo de actividad",
-      ["Capacitación", "Viaje", "Compra", "Evento", "Otro"])
+  nombre = st.text_input("Nombre de la actividad")
+  tipo = st.selectbox(
+    "Tipo de actividad",
+    ["Capacitación", "Viaje", "Compra", "Evento", "Otro"])
     
-    presupuesto = st.number_input(
-      "Presupuesto",
-      min_value=0.0,
-      value=0.0)
-    
-    gasto_real = st.number_input(
-      "Gasto real",
-      min_value=0.0,
-      value=0.0
-    )
+  presupuesto = st.number_input(
+    "Presupuesto",
+    min_value=0.0,
+    value=0.0)
+  
+  gasto_real = st.number_input(
+    "Gasto real",
+    min_value=0.0,
+    value=0.0
+  )
 
 # Botón Agregar
     if st.button("Agregar actividad"):
