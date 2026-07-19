@@ -38,7 +38,7 @@ elif modulo == "Ejercicio 1":
         else:
             exceso = gasto - presupuesto
             st.error(f"❌ El presupuesto fue excedido.")
-            st.write(f"Exceso: S/ {exceso:.2f}")
+            st.write(f"Excedido por: S/ {exceso:.2f}")
   
 elif modulo == "Ejercicio 2":
   st.write("Estas en el Ejercicio 2")
