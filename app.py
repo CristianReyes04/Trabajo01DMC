@@ -3,7 +3,7 @@ import numpy as np
 
 st.session_state
 
-st.title("Trabajo 01 ")
+
 st.image("Logo_python.png")
 st.sidebar.image("Logo_inst.png")
 st.sidebar.title("Módulos")
@@ -11,6 +11,12 @@ st.sidebar.title("Módulos")
 modulo = st.sidebar.selectbox("Elija un módulo", ["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
 
 if modulo == "Home":
+  st.title("Trabajo 01 :Proyecto Bancario Abanks")
+  st.image("Logo_python.png")
+  
+  st.write("Título del proyecto:")
+  st.write("Título del proyecto:")
+  
   valor_inicial = st.number_input("Ingrese el valor inicial: ", value=0)
   valor_final = st.number_input("Ingrese el valor Final: ", value=1)
   lista_numerica = list(range(valor_inicial,valor_final))
