@@ -1,5 +1,6 @@
 import streamlit as st
 import numpy as np
+import datetime
 
 st.session_state
 
@@ -11,17 +12,24 @@ st.sidebar.title("Módulos")
 modulo = st.sidebar.selectbox("Elija un módulo", ["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
 
 if modulo == "Home":
-  st.title("Trabajo 01 :Proyecto Bancario Abanks")
-  st.image("Logo_python.png")
+  st.title("Proyecto Bancario Abanks - Ladonware")
+  st.image("Abnaks.png")
+  st.image("ladon.jpg")
+
+  lv_estudiante = "Cristian Valentin Reyes Reyes"
+  lv_modulo    = "Modulo 01"
+  lv_informcion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
+  lv_anio = datetime.date.today().year
+  lv_descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
+  lv_tecnologias = "Streamlit"
+
+  st.write("Nombre del estudiante:",lv_estudiante)
+  st.write("Nombre del Módulo:",lv_modulo)
+  st.write("Información general del estudiante:",lv_informcion)
+  st.write("Año:",lv_anio)
+  st.write("Descripción del Proyecto:",lv_descripcion)
+  st.write("Tecnologías utilizadas:",lv_tecnologias)
   
-  st.write("Título del proyecto:")
-  st.write("Título del proyecto:")
-  
-  valor_inicial = st.number_input("Ingrese el valor inicial: ", value=0)
-  valor_final = st.number_input("Ingrese el valor Final: ", value=1)
-  lista_numerica = list(range(valor_inicial,valor_final))
-  #similar a print es write
-  st.write(lista_numerica)
 elif modulo == "Ejercicio 1":
   st.write("Estas en el Ejercicio 1")
 elif modulo == "Ejercicio 2":
