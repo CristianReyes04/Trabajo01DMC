@@ -49,7 +49,7 @@ elif modulo == "Ejercicio 2":
   nombre = st.text_input("Nombre de la actividad")
   tipo = st.selectbox(
     "Tipo de actividad",
-    ["Capacitación", "Viaje", "Compra", "Evento", "Otro"])
+    ["Capacitación", "Consultaria", "Servicio", "Evento", "Otro"])
     
   presupuesto = st.number_input(
     "Presupuesto",
