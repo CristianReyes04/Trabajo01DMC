@@ -76,9 +76,10 @@ elif modulo == "Ejercicio 2":
     }
   st.session_state.actividades.append(actividad)
   # Mostrar la tabla
-  st.subheader("Lista de actividades")
-  df = pd.DataFrame(st.session_state.actividades)
-  st.dataframe(df)
+  if len(st.session_state.actividades) > 0:
+    st.subheader("Lista de actividades")
+    df = pd.DataFrame(st.session_state.actividades)
+    st.dataframe(df)
   
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
