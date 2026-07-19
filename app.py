@@ -3,6 +3,24 @@ import numpy as np
 import datetime
 import pandas as pd
 
+class Actividad:
+  def __init__(self, nombre, tipo, presupuesto, gasto_real):
+    self.nombre = nombre
+    self.tipo = tipo
+    self.presupuesto = presupuesto
+    self.gasto_real = gasto_real
+  
+  def esta_en_presupuesto(self):
+    return self.gasto_real <= self.presupuesto
+
+  def mostrar_info(self):
+    return (
+      f"Actividad: {self.nombre} | "
+      f"Tipo: {self.tipo} | "
+      f"Presupuesto: S/ {self.presupuesto:.2f} | "
+      f"Gasto Real: S/ {self.gasto_real:.2f}"
+    )
+    
 st.sidebar.image("Abnaks.png")
 st.sidebar.title("Módulos")
 
@@ -104,7 +122,23 @@ elif modulo == "Ejercicio 3":
     st.dataframe(df)
     
 elif modulo == "Ejercicio 4":
-  st.write("Estas en el Ejercicio 4")
+  st.title("Programación Orientada a Objetos")
+  
+  if len(st.session_state.actividades) > 0:
+    
+    st.subheader("Actividades registradas")
+    for dato in st.session_state.actividades:
+      actividad = Actividad(
+        dato["Nombre"],
+        dato["Tipo"],
+        dato["Presupuesto"],
+        dato["Gasto Real"]
+      )
+      st.write(actividad.mostrar_info())
+      if actividad.esta_en_presupuesto():
+        st.success("Dentro del presupuesto")
+      else:
+        st.warning("Excedió el presupuesto")
 else:
   st.write("Elija una Opción")
 
