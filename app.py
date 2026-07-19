@@ -20,10 +20,10 @@ if modulo == "Home":
   
   st.markdown(f""" **Nombre del estudiante:** {estudiante}""")
   st.markdown(f""" **Módulo:** {nom_modulo}""")
-  st.markdown(f""" **Información:** {informacion}""")
+  st.markdown(f""" **Información del estudiante:** {informacion}""")
   st.markdown(f""" **Año:** {anio}""")
-  st.markdown(f""" **Descripción del proyecto:**{descripcion}""")
-  st.markdown(f""" **Tecnologías utilizadas:**{tecnologias}""")
+  st.markdown(f""" **Descripción del proyecto:** {descripcion}""")
+  st.markdown(f""" **Tecnologías utilizadas:** {tecnologias}""")
   
 elif modulo == "Ejercicio 1":
   st.write("Estas en el Ejercicio 1")
