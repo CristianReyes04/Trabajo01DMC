@@ -63,8 +63,8 @@ Métodos implementados:
   2. Ejecutar Streamlit rum app.py
  
 ## Enlaces
-Repositorio: https://github.com/CristianReyes04/Trabajo01DMC/
-Aplicativo: https://trabajo01dmc-cristian-reyes-reyes.streamlit.app/
+- https://github.com/CristianReyes04/Trabajo01DMC/
+- https://trabajo01dmc-cristian-reyes-reyes.streamlit.app/
   
 
 
