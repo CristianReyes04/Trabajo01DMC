@@ -83,7 +83,18 @@ elif modulo == "Ejercicio 2":
     st.dataframe(df)
   
 elif modulo == "Ejercicio 3":
-  st.write("Estas en el Ejercicio 3")
+  st.title("Funciones y Programación Funcional")
+  def calcular_interes(presupuesto, tasa, meses):
+    return presupuesto * tasa * meses
+  
+  presupuesto = st.number_input("Ingrese Presupuesto",min_value=0.0,value=0.0)
+  tasa = st.number_input("Ingrese tasa",min_value=0.0,value=0.0)
+  meses = st.number_input("Ingrese meses", min_value=0,value=0)
+  
+  if st.button("Calcular"):
+    resultado = calcular_interes(presupuesto,tasa,meses)
+    st.write(f"Resultado: S/ {resultado:.2f}")
+    
 elif modulo == "Ejercicio 4":
   st.write("Estas en el Ejercicio 4")
 else:
