@@ -18,7 +18,8 @@ if modulo == "Home":
   descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
   tecnologias = "Python, Streamlit, NumPy"
 
-  st.write("Nombre del estudiante:",estudiante)
+  st.markdown("Nombre del estudiante:")
+  st.write(estudiante)
   st.write("Nombre del Módulo:",nom_modulo)
   st.write("Información general del estudiante:",informacion)
   st.write("Año:",anio)
