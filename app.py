@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import datetime
+import pandas as pd
 
 st.sidebar.image("Abnaks.png")
 st.sidebar.title("Módulos")
@@ -41,7 +42,54 @@ elif modulo == "Ejercicio 1":
             st.write(f"Excedido por: S/ {exceso:.2f}")
   
 elif modulo == "Ejercicio 2":
-  st.write("Estas en el Ejercicio 2")
+  st.title("Registro Actividades Financieras")
+  if "actividades" not in st.session_state:
+    st.session_state.actividades = []
+    nombre = st.text_input("Nombre de la actividad")
+    tipo = st.selectbox(
+      "Tipo de actividad",
+      ["Capacitación", "Viaje", "Compra", "Evento", "Otro"])
+    
+    presupuesto = st.number_input(
+      "Presupuesto",
+      min_value=0.0,
+      value=0.0)
+    
+    gasto_real = st.number_input(
+      "Gasto real",
+      min_value=0.0,
+      value=0.0
+    )
+
+# Botón Agregar
+    if st.button("Agregar actividad"):
+      actividad = {
+        "Nombre": nombre,
+        "Tipo": tipo,
+        "Presupuesto": presupuesto,
+        "Gasto Real": gasto_real
+      }
+      st.session_state.actividades.append(actividad)
+      st.success("Actividad agregada correctamente.")
+      # Mostrar actividades
+if len(st.session_state.actividades) > 0:
+  st.subheader("Lista de actividades")
+  df = pd.DataFrame(st.session_state.actividades)
+  st.dataframe(df, use_container_width=True)
+  st.subheader("Evaluación")
+  for actividad in st.session_state.actividades:
+    nombre = actividad["Nombre"]
+    presupuesto = actividad["Presupuesto"]
+    gasto = actividad["Gasto Real"]
+    if gasto <= presupuesto:
+      saldo = presupuesto - gasto
+      st.success(f"{nombre}: Cumple el presupuesto. Saldo disponible: S/ {saldo:.2f}")
+        else:
+            exceso = gasto - presupuesto
+            st.error(
+                f"{nombre}: Excedió el presupuesto en S/ {exceso:.2f}"
+            )
+          
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
 elif modulo == "Ejercicio 4":
