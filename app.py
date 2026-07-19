@@ -18,13 +18,7 @@ if modulo == "Home":
   descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
   tecnologias = "Python, Streamlit, NumPy"
 
-  st.markdown("Nombre del estudiante:")
-  st.write(estudiante)
-  st.write("Nombre del Módulo:",nom_modulo)
-  st.write("Información general del estudiante:",informacion)
-  st.write("Año:",anio)
-  st.write("Descripción del Proyecto:",descripcion)
-  st.write("Tecnologías utilizadas:",tecnologias)
+st.markdown(f""" **Nombre del estudiante:** {estudiante}**Módulo:** {nom_modulo}**Información:** {informacion}**📅 Año:** {anio}**🏦 Descripción del proyecto:**{descripcion}**💻 Tecnologías utilizadas:**{tecnologias}""")
   
 elif modulo == "Ejercicio 1":
   st.write("Estas en el Ejercicio 1")
