@@ -12,7 +12,7 @@ if modulo == "Home":
   st.image("ladon.jpg")
 
   estudiante = "Cristian Valentin Reyes Reyes"
-  nom_modulo    = "Modulo 01"
+  nom_modulo    = "Módulo 01"
   informacion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
   anio = datetime.date.today().year
   descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
