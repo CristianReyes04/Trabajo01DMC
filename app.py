@@ -58,16 +58,14 @@ elif modulo == "Ejercicio 2":
     min_value=0.0,
     value=0.0
   )
-
-# Botón Agregar
-if st.button("Agregar actividad"):
-  actividad = {
-    "Nombre": nombre,
-    "Tipo": tipo,
-    "Presupuesto": presupuesto,
-    "Gasto Real": gasto_real
-  }
-  st.write("Actividad agregada correctamente.")
+  if st.button("Agregar actividad"):
+    actividad = {
+      "Nombre": nombre,
+      "Tipo": tipo,
+      "Presupuesto": presupuesto,
+      "Gasto Real": gasto_real
+    }
+    st.write("Actividad agregada correctamente.")
    
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
