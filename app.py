@@ -14,14 +14,14 @@ if modulo == "Home":
 
   lv_estudiante = "Cristian Valentin Reyes Reyes"
   lv_modulo    = "Modulo 01"
-  lv_informcion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
+  lv_informacion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
   lv_anio = datetime.date.today().year
   lv_descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
   lv_tecnologias = "Python, Streamlit, NumPy"
 
   st.write("Nombre del estudiante:",lv_estudiante)
   st.write("Nombre del Módulo:",lv_modulo)
-  st.write("Información general del estudiante:",lv_informcion)
+  st.write("Información general del estudiante:",lv_informacion)
   st.write("Año:",lv_anio)
   st.write("Descripción del Proyecto:",lv_descripcion)
   st.write("Tecnologías utilizadas:",lv_tecnologias)
