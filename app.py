@@ -11,6 +11,7 @@ if modulo == "Home":
   st.title("Proyecto Abanks - Ladonware")
   st.image("ladon.jpg")
 
+  st.write("Módulo Home Datos Personales")
   estudiante = "Cristian Valentin Reyes Reyes"
   nom_modulo    = "Módulo 01"
   informacion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
