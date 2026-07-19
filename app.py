@@ -84,23 +84,25 @@ elif modulo == "Ejercicio 2":
   
 elif modulo == "Ejercicio 3":
   st.title("Funciones y Programación Funcional")
-  def calcular_interes(presupuesto, tasa, meses):
+  def calcular_retorno(presupuesto, tasa, meses):
     return presupuesto * tasa * meses
   
   tasa = st.number_input("Ingrese tasa",min_value=0.0,value=0.0)
   meses = st.number_input("Ingrese meses", min_value=0,value=0)
   
   if st.button("Calcular"):
-    # Mostrar la tabla
-    if len(st.session_state.actividades) > 0:
-      for actividad in st.session_state.actividades:
-        presupuesto = actividad["Presupuesto"]
-        resultado = calcular_interes(presupuesto,tasa,meses)
-        actividad["Interés"] = resultado
-      st.subheader("Lista de actividades")
-      df = pd.DataFrame(st.session_state.actividades)
-      st.dataframe(df)
-      
+    st.session_state.actividades = list(
+      map(
+        lambda actividad: {
+          **actividad,
+          "Retorno_Esperado": calcular_retorno(actividad["Presupuesto"],tasa,meses)
+        },
+        st.session_state.actividades
+      )
+    )
+    df = pd.DataFrame(st.session_state.actividades)
+    st.dataframe(df)
+    
 elif modulo == "Ejercicio 4":
   st.write("Estas en el Ejercicio 4")
 else:
