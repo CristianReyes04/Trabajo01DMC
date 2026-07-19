@@ -15,7 +15,7 @@ if modulo == "Home":
   nom_modulo    = "Módulo 01"
   informacion = "Soy de profesión Ingeniero, de nacionalidad Peruana, actualmente vivo en Piura."
   anio = datetime.date.today().year
-  descripcion = "El Proyecto conciste en una plaforma que puedan gestionar operaciones Bancarias"
+  descripcion = "El Proyecto de una plaforma que puedan gestionar operaciones Bancarias"
   tecnologias = "Python, Streamlit, NumPy"
   
   st.markdown(f""" **Nombre del estudiante:** {estudiante}""")
