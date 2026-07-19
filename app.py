@@ -3,7 +3,7 @@ import numpy as np
 import datetime
 
 st.session_state
-st.image("Abnaks.png")
+st.sidebar.image("Abnaks.png")
 st.sidebar.title("Módulos")
 
 modulo = st.sidebar.selectbox("Elija un módulo", ["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
