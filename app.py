@@ -95,10 +95,11 @@ elif modulo == "Ejercicio 3":
     # Mostrar la tabla
     if len(st.session_state.actividades) > 0:
        for actividad in st.session_state.actividades:
-            presupuesto = actividad["Presupuesto"]
-            resultado = calcular_interes(presupuesto,tasa,meses)
-            actividad["Interés"] = resultado
-         st.subheader("Lista de actividades")
+         presupuesto = actividad["Presupuesto"]
+         resultado = calcular_interes(presupuesto,tasa,meses)
+         actividad["Interés"] = resultado
+         
+      st.subheader("Lista de actividades")
       df = pd.DataFrame(st.session_state.actividades)
       st.dataframe(df)
     
