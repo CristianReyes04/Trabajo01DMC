@@ -69,12 +69,11 @@ elif modulo == "Ejercicio 2":
       "Gasto Real": gasto_real
     }
     for actividad in st.session_state.actividades:
-
-    if actividad["Gasto Real"] <= actividad["Presupuesto"]:
+      if actividad["Gasto Real"] <= actividad["Presupuesto"]:
         st.write(f"✅ {actividad['Nombre']}: Dentro del presupuesto")
-    else:
+      else:
         st.write(f"❌ {actividad['Nombre']}: Excedió el presupuesto")
-   
+        
 elif modulo == "Ejercicio 3":
   st.write("Estas en el Ejercicio 3")
 elif modulo == "Ejercicio 4":
