@@ -8,7 +8,7 @@ st.sidebar.title("Módulos")
 modulo = st.sidebar.selectbox("Elija un módulo", ["Home","Ejercicio 1","Ejercicio 2","Ejercicio 3","Ejercicio 4"])
 
 if modulo == "Home":
-  st.title("Proyecto Bancario Abanks - Ladonware")
+  st.title("Proyecto Abanks - Ladonware")
   st.image("ladon.jpg")
 
   lv_estudiante = "Cristian Valentin Reyes Reyes"
